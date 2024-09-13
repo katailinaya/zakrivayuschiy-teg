@@ -13,7 +13,6 @@
   --bg-color: #fff;
   --main-color: #000;
   --bg-image: url(../svg/pattern-light.svg);
-  --border: 2px solid var(--main-color);
   --heart-color: #ff0000;
 }
 
@@ -26,7 +25,6 @@
     --bg-color: #fff;
     --main-color: #000;
     --bg-image: url(../svg/pattern-light.svg);
-    --border: 2px solid var(--main-color);
     --heart-color: #ff0000;
   }
 }
@@ -39,7 +37,6 @@
   --normal-font-wght: 465;
   --bold-font-wght: 785;
   --bg-image: url(../svg/pattern-dark.svg);
-  --border: 2px solid var(--main-color);
   --heart-color: #ff0000;
 }
 
@@ -52,7 +49,6 @@
     --normal-font-wght: 465;
     --bold-font-wght: 785;
     --bg-image: url(../svg/pattern-dark.svg);
-    --border: 2px solid var(--main-color);
     --heart-color: #ff0000;
   }
 }

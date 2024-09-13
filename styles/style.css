@@ -19,13 +19,11 @@
   min-block-size: 100dvb;
   padding-block-start: 100px;
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
-  font-variation-settings: "wght" var(--normal-font-wght);
-  background-color: var(--bg-color);
-  color: var(--main-color);
-  background-image: var(--bg-image);
-  background-repeat: repeat;
+  font-variation-settings: 'wght' var(--normal-font-wght, 400);
+  color: var(--main-color, #000);
+  background: var(--bg-color, #fff)
+    var(--bg-image, url(../svg/pattern-light.svg)) repeat fixed;
   background-size: 4px;
-  background-attachment: fixed;
 }
 
 .header {
@@ -34,8 +32,8 @@
   align-items: center;
   gap: 25px;
   inline-size: 100%;
-  background-color: var(--bg-color);
-  border: var(--border);
+  background-color: var(--bg-color, #fff);
+  border: 2px solid var(--main-color, #000);
   padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-block-end: 23px;
 }
@@ -48,12 +46,12 @@
 }
 
 .header__logo {
-  font-family: var(--accent-font), "Courier New", Courier, monospace;
+  font-family: var(--accent-font), 'Copperplate', fantasy;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__h1 {
-  font-family: var(--accent-font), "Courier New", Courier, monospace;
+  font-family: var(--accent-font), 'Copperplate', fantasy;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
 }
@@ -68,7 +66,7 @@
 .theme-menu__button {
   background-color: transparent;
   border: none;
-  font-family: var(--accent-font), "Courier New", Courier, monospace;
+  font-family: var(--accent-font), 'Copperplate', fantasy;
   font-size: 14px;
   text-transform: uppercase;
   position: relative;
@@ -78,10 +76,10 @@
 }
 
 .theme-menu__button::after {
-  content: "";
+  content: '';
   position: absolute;
   opacity: 0.6;
-  background-color: var(--main-color);
+  background-color: var(--main-color, #000);
 
   transition: transform 0.3s;
   transform: scaleX(0);
@@ -116,7 +114,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: "▶";
+  content: '▶';
   position: absolute;
   inline-size: 16px;
   block-size: 13px;
@@ -134,40 +132,36 @@
   inline-size: 100%;
 }
 
-.content__cards {
-  inline-size: inherit;
-}
-
 .content__card {
-  background-color: var(--bg-color);
-  border: var(--border);
+  background-color: var(--bg-color, #fff);
+  border: 2px solid var(--main-color, #000);
   display: flex;
   flex-direction: column;
-  inline-size: inherit;
   padding-block-end: 25px;
 }
 
 .content__card-header {
   padding: 5px 10px;
-  font-variation-settings: "wght" var(--bold-font-wght);
+  font-variation-settings: 'wght' var(--bold-font-wght, 700);
   font-size: 18px;
   line-height: 19px;
+  border-block-end: 2px solid var(--main-color, #000);
 }
 
 .content__card-image {
   inline-size: 100%;
   object-fit: cover;
   object-position: center;
-  margin-block-start: 2px;
 }
 
 .content__card-description {
   display: flex;
   flex-direction: column;
-  gap: 27px;
+  gap: 25px;
   padding: 27px 27px;
   font-size: 18px;
   line-height: 117%;
+  border-block-start: 2px solid var(--main-color, #000);
 }
 
 .card__footer {
@@ -179,16 +173,39 @@
   gap: 8px;
 }
 
+.card__icon-button {
+  inline-size: 2.5em;
+  background-color: transparent;
+  border: 0px solid var(--main-color, #000);
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  outline: 0px solid var(--main-color, #000);
+  outline-offset: -2px;
+  transition: outline 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: 0px solid var(--main-color, #000);
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--main-color, #000);
+}
+
 .button {
   display: flex;
   flex-direction: column;
   gap: 8px;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-color);
-  border: var(--border);
-  font-family: var(--accent-font), "Courier New", Courier, monospace;
-  color: var(--main-color);
+  background-color: var(--bg-color, #fff);
+  border: 2px solid var(--main-color, #000);
+  font-family: var(--accent-font), 'Copperplate', fantasy;
+  color: var(--main-color, #000);
   font-size: 14px;
   font-weight: 400;
   line-height: 90%;
@@ -202,29 +219,47 @@
 }
 
 .button::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
-  background-color: var(--bg-color);
+  background-color: var(--bg-color, #fff);
   transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .button:hover::after {
   width: 100%;
-  background-color: var(--main-color);
+  background-color: var(--main-color, #000);
 }
 
 .button:hover {
-  color: var(--bg-color);
+  color: var(--bg-color, #fff);
   transition: color 1s ease;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0px var(--main-color);
+  box-shadow: 2px 2px 0px var(--main-color, #000);
+}
+
+.like-icon {
+  inline-size: 100%;
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+  min-block-size: 38px;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+}
+
+.content__footer-button {
+  padding: 15px 20px;
 }
 
 .button__img {
@@ -233,48 +268,7 @@
   z-index: 1;
 }
 
-.button__text {
-  position: relative;
-  z-index: 1;
-}
-
-.card__like-button {
-  min-inline-size: 130px;
-  min-block-size: 38px;
-}
-
-.content__footer-button {
-  padding: 15px 20px;
-}
-
-.like-icon {
-  inline-size: 100%;
-}
-
-.card__icon-button {
-  inline-size: 2.5em;
-  background-color: transparent;
-  border: 0px solid var(--main-color);
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  outline: 0px solid var(--main-color);
-  outline-offset: -2px;
-  transition: outline 0.3s ease;
-}
-
-.card__icon-button:focus {
-  outline: 0px solid var(--main-color);
-}
-
-.card__icon-button:focus-visible {
-  outline: none;
-  box-shadow: inset 0 0 0 2px var(--main-color);
-}
-
-@media (width >=375px) {
+@media (width >=697px) {
   .page {
     display: flex;
     flex-direction: column;
