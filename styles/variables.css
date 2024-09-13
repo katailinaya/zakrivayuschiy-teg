@@ -1,1 +1,12 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font: "Inter";
+  --accent-font: "PressStart2P";
+  --normal-font-wght: 400;
+  --bold-font-wght: 700;
+  --bg-color: #fff;
+  --main-color: #000;
+  --bg-image: url(../svg/pattern-light.svg);
+  --heart-color: #ff0000;
+}
