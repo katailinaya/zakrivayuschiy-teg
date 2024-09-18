@@ -7,6 +7,26 @@
   --bold-font-wght: 700;
   --bg-color: #fff;
   --main-color: #000;
-  --bg-image: url(../svg/pattern-light.svg);
   --heart-color: #ff0000;
+  --bg-gradient: repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient-flow-begin, #e7e7e7),
+      var(--bg-gradient-flow-begin, #e7e7e7) 0.01%,
+      var(--bg-gradient-flow-end, #1a1a1a)
+    );
+  --label-text-border: #fff;
+  --backdrop-color: rgba(0, 0, 0, 0.75);
+  --button-text-color: #fff;
 }

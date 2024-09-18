@@ -12,8 +12,28 @@
   --bold-font-wght: 700;
   --bg-color: #fff;
   --main-color: #000;
-  --bg-image: url(../svg/pattern-light.svg);
   --heart-color: #ff0000;
+  --bg-gradient: repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--bg-gradient-color, #d3d3d3),
+      var(--bg-gradient-color, #d3d3d3) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient-flow-begin, #e7e7e7),
+      var(--bg-gradient-flow-begin, #e7e7e7) 0.01%,
+      var(--bg-gradient-flow-end, #1a1a1a)
+    );
+  --label-text-border: #fff;
+  --backdrop-color: rgba(0, 0, 0, 0.75);
+  --button-text-color: #fff;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,8 +44,28 @@
     --bold-font-wght: 700;
     --bg-color: #fff;
     --main-color: #000;
-    --bg-image: url(../svg/pattern-light.svg);
     --heart-color: #ff0000;
+    --bg-gradient: repeating-linear-gradient(
+        to right,
+        var(--bg-gradient-color, #d3d3d3),
+        var(--bg-gradient-color, #d3d3d3) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        var(--bg-gradient-color, #d3d3d3),
+        var(--bg-gradient-color, #d3d3d3) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        var(--bg-gradient-flow-begin, #e7e7e7),
+        var(--bg-gradient-flow-begin, #e7e7e7) 0.01%,
+        var(--bg-gradient-flow-end, #1a1a1a)
+      );
+    --label-text-border: #fff;
+    --backdrop-color: rgba(0, 0, 0, 0.75);
+    --button-text-color: #fff;
   }
 }
 
@@ -36,8 +76,27 @@
   --main-color: #00cc14;
   --normal-font-wght: 465;
   --bold-font-wght: 785;
-  --bg-image: url(../svg/pattern-dark.svg);
   --heart-color: #ff0000;
+  --bg-gradient: repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-color, #000),
+      var(--bg-gradient-color, #000) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      var(--bg-gradient-color, #000),
+      var(--bg-gradient-color, #000) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient-flow-begin, #007f0c),
+      var(--bg-gradient-flow-end, #004306)
+    );
+  --label-text-border: #000;
+  --backdrop-color: rgba(0, 0, 0, 0.75);
+  --button-text-color: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,7 +107,26 @@
     --main-color: #00cc14;
     --normal-font-wght: 465;
     --bold-font-wght: 785;
-    --bg-image: url(../svg/pattern-dark.svg);
     --heart-color: #ff0000;
+    --bg-gradient: repeating-linear-gradient(
+        to right,
+        var(--bg-gradient-color, #000),
+        var(--bg-gradient-color, #000) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        var(--bg-gradient-color, #000),
+        var(--bg-gradient-color, #000) 2px,
+        transparent 2px,
+        transparent 4px
+      ),
+      linear-gradient(
+        var(--bg-gradient-flow-begin, #007f0c),
+        var(--bg-gradient-flow-end, #004306)
+      );
+    --label-text-border: #000;
+    --backdrop-color: rgba(0, 0, 0, 0.75);
+    --button-text-color: #00cc14;
   }
 }
