@@ -22,6 +22,10 @@
   }
 }
 
+.sparks {
+  opacity: 0;
+}
+
 .card__icon-button .core {
   fill: transparent;
   transition: fill 0.3s 0.03s linear;
@@ -103,7 +107,7 @@
 
 .like-icon.is-liked .sparks {
   fill: var(--heart-color, #ff0000);
-  animation: sparks 0.3s 0.3s ease-in alternate forwards;
+  animation: sparks 0.3s 0.3s ease-in alternate;
 }
 
 .like-icon .contour {

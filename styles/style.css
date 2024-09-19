@@ -51,7 +51,7 @@
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
-.header__h1 {
+.header__heading {
   font-family: var(--accent-font), "Copperplate", fantasy;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
@@ -162,7 +162,7 @@
   text-shadow: -1px 0 var(--label-text-border, #fff),
     0 1px var(--label-text-border, #fff), 1px 0 var(--label-text-border, #fff),
     0 -1px var(--label-text-border, #fff);
-  inset-inline-end: 25px;
+  inset-inline-end: 13px;
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -173,7 +173,7 @@
   (text-stroke: 1px var(--label-text-border, #fff)) or
     (-webkit-text-stroke: 1px var(--label-text-border, #fff))
 ) {
-  .label {
+  .content__image-label {
     -webkit-text-stroke: 1px var(--label-text-border, #fff);
     text-stroke: 1px var(--label-text-border, #fff);
     text-shadow: none;
@@ -219,7 +219,7 @@
   justify-content: center;
   outline: 0px solid var(--main-color, #000);
   outline-offset: -2px;
-  transition: outline 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -268,11 +268,6 @@
 .button:hover::after {
   width: 100%;
   background-color: var(--main-color, #000);
-}
-
-.button:hover {
-  color: var(--bg-color, #fff);
-  transition: color 1s ease;
 }
 
 .button:focus-visible {
@@ -402,5 +397,9 @@
 
   .button__img {
     width: 21px;
+  }
+
+  .content__image-label {
+    inset-inline-end: 25px;
   }
 }
