@@ -319,7 +319,6 @@
 }
 
 .content__footer-dialog::backdrop {
-  opacity: 0.75;
   background: var(--backdrop-color);
 }
 
